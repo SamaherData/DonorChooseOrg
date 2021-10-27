@@ -3,10 +3,16 @@ Teachers ask, You choose, Student learn.
 
 
 Features Engineering and Selection:
--Project  Posted  Month  derived  from  Project  Posted Date.
--Eliminating  the  dependent  Features by Chi2-test 
--A new data frame with text features
--Appling Chi2-test for  selected  features  and  made  sure  that  they  are significantly important for the classification of Project Status.
+
+Project  Posted  Month  derived  from  Project  Posted Date.
+
+Eliminating  the  dependent  Features by Chi2-test 
+
+A new data frame with text features
+
+Appling Chi2-test for  selected  features  and  made  sure  that  they  are significantly important for the classification of Project Status.
+
+
 Dimensionality Reduction:
 
 Project Subject Category values reduced to single categories instead of two categories in some observations
