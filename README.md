@@ -10,13 +10,13 @@ We are using the data made publicly available on the DonorsChoose.org website. T
 
 **Features Engineering and Selection:**
 
-**1.**Project  Posted  Month  derived  from  Project  Posted Date.
+1. Project  Posted  Month  derived  from  Project  Posted Date.
 
-2.Eliminating  the  dependent  Features by Chi2-test 
+2. Eliminating  the  dependent  Features by Chi2-test 
 
-3.A new data frame with text features
+3. A new data frame with text features
 
-4.Appling Chi2-test for  selected  features  and  made  sure  that  they  are significantly important for the classification of Project Status.
+4. Appling Chi2-test for  selected  features  and  made  sure  that  they  are significantly important for the classification of Project Status.
 
 
 **Dimensionality Reduction:**
@@ -32,13 +32,13 @@ Project Subject Category values reduced to single categories instead of two cate
 
 **Building the Predictive Models:**
 
-1.Splitting  the  data   into training  and  test  sets
+1. Splitting  the  data   into training  and  test  sets
 
-2.5-fold  Cross  Validation
+2. 5-fold  Cross  Validation
 
-3.Hyper-parameter optimization using Random Search
+3. Hyper-parameter optimization using Random Search
 
-4.Applying the SMOTE function in train set only.
+4. Applying the SMOTE function in train set only.
 
 **Classifiers Performance using Train-Test split:**
 
