@@ -10,7 +10,7 @@ We are using the data made publicly available on the DonorsChoose.org website. T
 
 **Features Engineering and Selection:**
 
-1.Project  Posted  Month  derived  from  Project  Posted Date.
+**1.**Project  Posted  Month  derived  from  Project  Posted Date.
 
 2.Eliminating  the  dependent  Features by Chi2-test 
 
