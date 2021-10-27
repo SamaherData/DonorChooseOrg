@@ -1,5 +1,5 @@
 # DonorChooseOrg
-Teachers ask, You choose, Student learn.
+**Teachers ask, You choose, Student learn.**
 
 DonorsChoose.org is a US-based nonprofit foundation that allows individuals to donate directly to public school classroom projects, organizing teacher’s project proposals in a way that likely donors can find and fund projects that best satisfy their preferences[1]. It promotes and facilitates the crowdfunding of classroom projects from schools around the country. Their mission statement accord- ing to their website “engages the public in public schools by giving people a simple, accountable and personal way to address educational inequity.
 
