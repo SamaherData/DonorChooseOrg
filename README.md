@@ -3,7 +3,8 @@
 
 DonorsChoose.org is a US-based nonprofit foundation that allows individuals to donate directly to public school classroom projects, organizing teacher’s project proposals in a way that likely donors can find and fund projects that best satisfy their preferences[1]. It promotes and facilitates the crowdfunding of classroom projects from schools around the country. Their mission statement accord- ing to their website “engages the public in public schools by giving people a simple, accountable and personal way to address educational inequity.
 
-**Data Description** 
+**Data Description** :
+
 We are using the data made publicly available on the DonorsChoose.org website. This publicly available dataset comes in the form of downloadable CSV files. DonorsChoose.org has shared data of all the past projects, the related resources, teachers, schools, donors, and donations. This analysis is limited to the projects posted after Jan 1, 2013. Our dataset contains (3.9M) donations by (1.5M) donors to (638k) projects over a total amount of (282M). The main contributing tables to our analysis are Projects and Schools. More information about the features description is detailed in Table I. 
 
 
