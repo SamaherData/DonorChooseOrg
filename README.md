@@ -7,6 +7,42 @@ DonorsChoose.org is a US-based nonprofit foundation that allows individuals to d
 
 We are using the data made publicly available on the DonorsChoose.org website. This publicly available dataset comes in the form of downloadable CSV files. DonorsChoose.org has shared data of all the past projects, the related resources, teachers, schools, donors, and donations. This analysis is limited to the projects posted after Jan 1, 2013. Our dataset contains (3.9M) donations by (1.5M) donors to (638k) projects over a total amount of (282M). The main contributing tables to our analysis are Projects and Schools. More information about the features description is detailed in Table I. 
 
+**EDA:**
+
+
+**Question 1: What kind of project resources category that takes a project to be fully funded
+or expired?**
+
+ ![image](https://user-images.githubusercontent.com/93243958/139236438-bc3ad4af-5657-45e6-8591-d05c68b73234.png)
+
+Findings:
+•	The highest success ratio was for "Food, Clothing & Hygiene”, followed by "Sports & Exercise Equipment".
+•	The lowest success ratio was for "Technology”, followed by "Visitors" and "Trips".
+
+**Question 2: what is the seasonality pattern for donations?**
+
+![image](https://user-images.githubusercontent.com/93243958/139236561-3c11582e-233b-41c0-83ea-02ea05f1aa50.png)
+
+Findings:
+Total donation is the lowest in June, where summer vacation is approaching; and highest in December (as Christmas gift?) and August (when schools are about to open).
+
+**Question3: Does the number of projects varied in a consistent way across the school year in order reach their funding goal?**
+
+![image](https://user-images.githubusercontent.com/93243958/139236794-3265282f-a1d0-48b0-b116-a60caac1f651.png)
+
+Findings:
+
+-From the figure above it appears that there tends to be a surge in the number of projects that get funded at the start of the school year, this number then decrease significantly around the summer time. The overall pattern has steady increase year to year. A few spikes in the number of projects funded. These spikes are due to large donation match partnerships from Ripple and Bill and Melinda Gates.
+
+-The figure below shows that indeed more projects are posted at the beginning of the school year which in turn leads to an increase in the number of live projects. This is also shown by the fact that the rate of funding projects and the rate of posting projects show a small but significant correlation ( r-squared= 0.22, p<0.001).
+
+Q4:
+
+![image](https://user-images.githubusercontent.com/93243958/139237198-60c76969-8a64-472f-be6d-29027f90a942.png)
+
+ 
+if the increase in project funding is entirely counterbalanced by an increase in the number of projects posted then the fraction of projects that are funded at the start of the year should not be significantly different from the fraction that are ultimately funded at any other point in the school year. To test this we sorted projects into those that were ultimately fully funded and those that expired before reaching their funding goal. The figure below shows that at the beginning of the school year, the number of projects posted that expired increased at what seems like a similar rate as those that were eventually funded.
+
 
 **Features Engineering and Selection:**
 
