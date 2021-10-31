@@ -17,7 +17,7 @@ The data made publicly available on the DonorsChoose.org website. This  dataset 
 **Question 1: What kind of project resources category that takes a project to be fully funded
 or expired?**
 
- ![image](https://user-images.githubusercontent.com/93243958/139236438-bc3ad4af-5657-45e6-8591-d05c68b73234.png)
+![image](https://user-images.githubusercontent.com/93243958/139573005-9fc6e349-2b1f-4e67-a32f-ba8f63a2e0c9.png)
 
 Findings:
 •	The highest success ratio was for "Food, Clothing & Hygiene”, followed by "Sports & Exercise Equipment".
