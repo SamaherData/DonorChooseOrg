@@ -82,7 +82,7 @@ Project Subject Category values reduced to single categories instead of two cate
 
 **Classifiers Performance using Train-Test split:**
 
-![image](https://user-images.githubusercontent.com/93243958/139011514-4a62ee6c-a935-4cc4-8158-13002f3b3d10.png)
+![image](https://user-images.githubusercontent.com/93243958/139572983-ae380da7-fb00-4634-8759-308e62d82c5e.png)
 
 **ROC Curve  for Classifiers Performance using Train-Test split:**
 
