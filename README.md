@@ -6,10 +6,7 @@ DonorsChoose.org is a US-based nonprofit foundation that allows individuals to d
 **Data Description** :
 
 The data made publicly available on the DonorsChoose.org website. This  dataset comes in the form of downloadable CSV files. DonorsChoose.org has shared data of all the past projects, the related resources, teachers, schools, donors, and donations. This analysis is limited to the projects posted after Jan 1, 2013. The dataset contains (3.9M) donations by (1.5M) donors to (638k) projects over a total amount of (282M). A project is said to have a class value of 0 if it is not funded within four months from the project post-date. Otherwise, it is said to have a class value of 1 and is considered as a fully funded project.The main contributing tables to our analysis are Projects and
-Schools. More information about the features description is detailed in Table (1).
-![image](https://user-images.githubusercontent.com/93243958/139680511-2d37f44f-6e8b-4a60-a437-350b2a4dcf18.png)
-
-Features in **bold** are the used features in the classification models.
+Schools. 
 
 
 **Data Preprocessing** :
@@ -60,9 +57,7 @@ or expired?**
 
 2. Eliminating  the  dependent  Features by Chi2-test 
 
-3. A new data frame with text features
-
-4. Appling Chi2-test for  selected  features  and  made  sure  that  they  are significantly important for the classification of Project Status.
+3. Appling Chi2-test for  selected  features  and  made  sure  that  they  are significantly important for the classification of Project Status.
 
 
 **Dimensionality Reduction:**
@@ -77,21 +72,14 @@ The main file to be used in solving our classification problem is the Projects.c
 **Building the Predictive Models:**
 
 1. Splitting  the  data   into training  and  test  sets
-
-2. 5-fold  Cross  Validation
-
-3. Hyper-parameter optimization using Random Search
-
-4. Applying the SMOTE function to solve the imbalanced class problem in train set only.
+2. Applying the SMOTE function to solve the imbalanced class problem in train set only.
 
 **Classifiers Performance using Train-Test split:**
 
 ![image](https://user-images.githubusercontent.com/93243958/139572983-ae380da7-fb00-4634-8759-308e62d82c5e.png)
 
 **ROC Curve  for Classifiers Performance using Train-Test split:**
-
-![image](https://user-images.githubusercontent.com/93243958/139011599-950a8341-020d-4d68-aab1-03a3d2c34da0.png)
-
+![image](https://user-images.githubusercontent.com/93243958/139693298-df05b591-ec30-479c-a81a-5c4fc0787fcd.png)
 
 
 
@@ -99,14 +87,9 @@ The main file to be used in solving our classification problem is the Projects.c
 
 One of the most important motivations of this analysis was to help teachers by exploring the features that made a project succeed in getting funded before the end of the campaign period. Based on the scope of this analysis, Project Posted Month, Project Cost, Project Resource Category and Project Subject Category Tree were the most significant features among others.
 
-• In train-test split, Random Forest performs better than the other classifiers with an F1-score of 0.84 
-Logistic Regression is the best model with an AUC value of 0.64. 
+• In train-test split, Random Forest performs better than the other classifiers with an F1-score of 0.84 Logistic Regression is the best model with an AUC value of 0.64. 
 
-• Project Posted Month was derived from Project Posted
-Date and explored. we found that projects posted in the start
-of the school year have a high probability of being Funded
-than projects posted during Summer time or the end of the
-school year.
+• Project Posted Month was derived from Project Posted Date and explored. we found that projects posted in the start of the school year have a high probability of being Funded than projects posted during Summer time or the end of the school year.
 
 
 
