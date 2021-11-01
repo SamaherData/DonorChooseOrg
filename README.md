@@ -14,7 +14,6 @@ Schools. More information about the features description is detailed in Table (1
 
 The cleaning process required eliminating data with missing values since the percentage of missing data is very small compared to the full number of data (1.56%), identifying
 outliers, as well as excluding features like IDs, Project Funded and Expired Dates as they are found to be less relevant to this analysis. The dataset showed considerable imbalance as the percentage of fully funded projects is much higher than those that had been expired (75%:25%). This issue had been addressed by applying the SMOTE function which is detailed in building the predictive models section. The main file to be used in solving our classification problem is the Projects.csv file. we started to look at the features and exclude non-contributed features (e.g. Teacher ID, School ID). Then, we explored the categorical columns that have high number of unique values and try to reduce them without losing information. For instance, Project Subject Category Tree column include instances with single categories and other instances with two categories combined as one. In order to have only one category in each row, we did the contingency table for every single category (main categories) with the Project Current Status class so we had frequency of each category for being Fully Funded or Expired. After that, we calculated the probability of each of them as shown in Table (2).
-
 ![image](https://user-images.githubusercontent.com/93243958/139572080-11663794-eaef-4a62-a94f-f799368486e8.png)
 
   
