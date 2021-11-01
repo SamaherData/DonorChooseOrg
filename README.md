@@ -15,7 +15,7 @@ Features in **bold** are the used features in the classification models.
 **Data Preprocessing** :
 
 The cleaning process required eliminating data with missing values since the percentage of missing data is very small compared to the full number of data (1.56%), identifying
-outliers, as well as excluding features like IDs, Project Funded and Expired Dates as they are found to be less relevant to this analysis. The dataset showed considerable imbalance as the percentage of fully funded projects is much higher than those that had been expired (75%:25%). This issue had been addressed by applying the SMOTE function which is detailed in building the predictive models section. The main file to be used in solving our classification problem is the Projects.csv file. we started to look at the features and exclude non-contributed features (e.g. Teacher ID, School ID). Then, we explored the categorical columns that have high number of unique values and try to reduce them without losing information. For instance, Project Subject Category Tree column include instances with single categories and other instances with two categories combined as one. In order to have only one category in each row, we did the contingency table for every single category (main categories) with the Project Current Status class so we had frequency of each category for being Fully Funded or Expired. After that, we calculated the probability of each of them as shown in Table (2).
+outliers, as well as excluding features like IDs, Project Funded and Expired Dates as they are found to be less relevant to this analysis. The dataset showed considerable imbalance as the percentage of fully funded projects is much higher than those that had been expired (75%:25%). This issue had been addressed by applying the SMOTE function which is detailed in building the predictive models section. The main file to be used in solving our classification problem is the Projects.csv file. we started to look at the features and exclude non-contributed features (e.g. Teacher ID, School ID). Then, we explored the categorical columns that have high number of unique values and try to reduce them without losing information. For instance, Project Subject Category Tree column include instances with single categories and other instances with two categories combined as one. In order to have only one category in each row, we did the contingency table for every single category (main categories) with the Project Current Status class so we had frequency of each category for being Fully Funded or Expired. After that, we calculated the probability of each of them as shown in Table (2).For instance, if we have AppliedLearning, Math and Science as categories of one project andthat project was Fully Funded we replace them with AppliedLearning only as it has the higher probability than Math andScience of being Fully Funded.We then merged the projects features file (Projects.csv)with the schools features file (Schools.csv), and drop Liveprojects rows from the target feature (Project Current Status)as we concerned in Expired and Fully Funded projects only.Then we convert the categorical features into dummies toprepare them for the modeling process.   
 
 ![image](https://user-images.githubusercontent.com/93243958/139572080-11663794-eaef-4a62-a94f-f799368486e8.png)
 
@@ -51,14 +51,7 @@ or expired?**
 
 • From the figure above it appears that there tends to be a surge in the number of projects that get funded at the start of the school year, this number then decrease significantly around the summer time. The overall pattern has steady increase year to year. A few spikes in the number of projects funded. These spikes are due to large donation match partnerships from Ripple and Bill and Melinda Gates.
 
-• The figure below shows that indeed more projects are posted at the beginning of the school year which in turn leads to an increase in the number of live projects. This is also shown by the fact that the rate of funding projects and the rate of posting projects show a small but significant correlation ( r-squared= 0.22, p<0.001).
-
-Q4:
-
-![image](https://user-images.githubusercontent.com/93243958/139237198-60c76969-8a64-472f-be6d-29027f90a942.png)
-
- 
-if the increase in project funding is entirely counterbalanced by an increase in the number of projects posted then the fraction of projects that are funded at the start of the year should not be significantly different from the fraction that are ultimately funded at any other point in the school year. To test this we sorted projects into those that were ultimately fully funded and those that expired before reaching their funding goal. The figure below shows that at the beginning of the school year, the number of projects posted that expired increased at what seems like a similar rate as those that were eventually funded.
+• The figure below shows that indeed more projects are posted at the beginning of the school year which in turn leads to an increase in the number of live projects. This is also shown by the fact that the rate of funding projects and the rate of posting projects show a small but significant correlation .
 
 
 **Features Engineering and Selection:**
@@ -74,14 +67,12 @@ if the increase in project funding is entirely counterbalanced by an increase in
 
 **Dimensionality Reduction:**
 
-Project Subject Category values reduced to single categories instead of two categories in some observations
+The main file to be used in solving our classification problem is the Projects.csv file. we started to look at the features and exclude non-contributed features (e.g. Teacher ID, School ID). Then, we explored the categorical columns that have high number of unique values and try to reduce them without losing information. For instance, Project Subject Category Tree column include instances with single categories and other instances with two categories combined as one. In order to have only one category in each row, we did the contingency table for every single category (main categories) with the Project Current Status class so we had frequency of each category for being Fully Funded or Expired. After that, we calculated the probability of each of them as shown in Table (3)
 
 ![image](https://user-images.githubusercontent.com/93243958/139011250-348036c4-34c5-4fca-a355-d96205fd5dcb.png)
 
 
-**Final Feature Set:**
 
-![image](https://user-images.githubusercontent.com/93243958/139011353-cff617d9-40d2-4762-a63b-0c82d495e226.png)
 
 **Building the Predictive Models:**
 
@@ -101,24 +92,21 @@ Project Subject Category values reduced to single categories instead of two cate
 
 ![image](https://user-images.githubusercontent.com/93243958/139011599-950a8341-020d-4d68-aab1-03a3d2c34da0.png)
 
-**Classifiers Performance using 5-fold Cross Validation:**
 
-![image](https://user-images.githubusercontent.com/93243958/139011689-ff1e2f42-49a0-47f6-a0cb-fe2572a79692.png)
-
-
-**ROC Curve  for Classifiers Performance using 5-fold Cross Validation:**
-
-![image](https://user-images.githubusercontent.com/93243958/139011848-1902fdd2-b1af-41dd-9cf8-e765b41ac341.png)
 
 
 **Conclusion:**
 
-In train-test split, Random Forest performs better than the other classifiers with an F1-score of 0.84 
+One of the most important motivations of this analysis was to help teachers by exploring the features that made a project succeed in getting funded before the end of the campaign period. Based on the scope of this analysis, Project Posted Month, Project Cost, Project Resource Category and Project Subject Category Tree were the most significant features among others.
+
+• In train-test split, Random Forest performs better than the other classifiers with an F1-score of 0.84 
 Logistic Regression is the best model with an AUC value of 0.64. 
 
-
-In 5-fold Cross Validation, XGBoost classifier performance has significantly improved with F1-score of 0.86. 
-Logistic Regression outperforms all other models with a stable AUC value  of 0.64. 
+• Project Posted Month was derived from Project Posted
+Date and explored. we found that projects posted in the start
+of the school year have a high probability of being Funded
+than projects posted during Summer time or the end of the
+school year.
 
 
 
