@@ -7,7 +7,7 @@ DonorsChoose.org is a US-based nonprofit foundation that allows individuals to d
 
 The data made publicly available on the DonorsChoose.org website. This  dataset comes in the form of downloadable CSV files. DonorsChoose.org has shared data of all the past projects, the related resources, teachers, schools, donors, and donations. This analysis is limited to the projects posted after Jan 1, 2013. The dataset contains (3.9M) donations by (1.5M) donors to (638k) projects over a total amount of (282M). A project is said to have a class value of 0 if it is not funded within four months from the project post-date. Otherwise, it is said to have a class value of 1 and is considered as a fully funded project.The main contributing tables to our analysis are Projects and
 Schools. More information about the features description is detailed in Table (1).
-![image](https://user-images.githubusercontent.com/93243958/139679351-a541dee4-7ae0-4606-b8b6-435d696bd670.png)
+![image](https://user-images.githubusercontent.com/93243958/139680511-2d37f44f-6e8b-4a60-a437-350b2a4dcf18.png)
 
 
 **Data Preprocessing** :
