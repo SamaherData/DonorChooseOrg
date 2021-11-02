@@ -32,7 +32,7 @@ or expired?**
 
 **Question 2: what is the seasonality pattern for donations?**
 
-![image](https://user-images.githubusercontent.com/93243958/139236561-3c11582e-233b-41c0-83ea-02ea05f1aa50.png)
+![image](https://user-images.githubusercontent.com/93243958/139925696-169a02fc-0bc0-4d45-87a8-b172ec99b757.png)
 
 **Findings:**
 
