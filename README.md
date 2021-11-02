@@ -5,13 +5,12 @@ DonorsChoose.org is a US-based nonprofit foundation that allows individuals to d
 
 **Data Description** :
 
-The data made publicly available on the DonorsChoose.org website.DonorsChoose.org has shared data of all the past projects, the related resources, teachers, schools, donors, and donations. This analysis is limited to the projects posted after Jan 1, 2013. The dataset contains (3.9M) donations by (1.5M) donors to (638k) projects over a total amount of (282M). A project is said to have a class value of 0 if it is not funded within four months from the project post-date. Otherwise, it is said to have a class value of 1 and is considered as a fully funded project.The main contributing tables to our analysis are Projects and Schools. 
+The data made publicly available on the DonorsChoose.org website. DonorsChoose.org has shared data of all the past projects, the related resources, teachers, schools, donors, and donations. This analysis is limited to the projects posted after Jan 1, 2013. The dataset contains (3.9M) donations by (1.5M) donors to (638k) projects over a total amount of (282M). A project is said to have a class value of 0 if it is not funded within four months from the project post-date. Otherwise, it is said to have a class value of 1 and is considered as a fully funded project. 
 
 
 **Data Preprocessing** :
 
-The cleaning process required eliminating data with missing values since the percentage of missing data is very small compared to the full number of data (1.56%), identifying
-outliers, as well as excluding features like IDs, Project Funded and Expired Dates as they are found to be less relevant to this analysis. The dataset showed considerable imbalance as the percentage of fully funded projects is much higher than those that had been expired (75%:25%). This issue had been addressed by applying the SMOTE function. The main file to be used in solving our classification problem is the Projects.csv file. we started to look at the features and exclude non-contributed features (e.g. Teacher ID, School ID). Then, we explored the categorical columns that have high number of unique values and try to reduce them without losing information. For instance, Project Subject Category Tree column include instances with single categories and other instances with two categories combined as one. In order to have only one category in each row, we did the contingency table for every single category (main categories) with the Project Current Status class so we had frequency of each category for being Fully Funded or Expired. After that, we calculated the probability of each of them as shown in Table (2).For instance, if we have AppliedLearning, Math and Science as categories of one project andthat project was Fully Funded we replace them with AppliedLearning only as it has the higher probability than Math andScience of being Fully Funded.We then merged the projects features file (Projects.csv)with the schools features file (Schools.csv), and drop Liveprojects rows from the target feature (Project Current Status)as we concerned in Expired and Fully Funded projects only.Then we convert the categorical features into dummies to prepare them for the modeling process.   
+The cleaning process required eliminating data with missing values since the percentage of missing data is very small compared to the full number of data and excluding features like IDs, Project Funded and Expired Dates as they are found to be less relevant to this analysis. The dataset showed considerable imbalance as the percentage of fully funded projects is much higher than those that had been expired (75%:25%). This issue had been addressed by applying the SMOTE function. The main file to be used in solving our classification problem is the Projects.csv file. I started to look at the features and exclude non-contributed features (e.g. Teacher ID, School ID). Then, I explored the categorical columns that have high number of unique values and try to reduce them without losing information. For instance, Project Subject Category Tree column include instances with single categories and other instances with two categories combined as one. In order to have only one category in each row, I did the contingency table for every single category (main categories) with the Project Current Status class so I had frequency of each category for being Fully Funded or Expired. After that, I calculated the probability of each of them as shown in Table (2).For instance, if I  have AppliedLearning, Math and Science as categories of one project and that project was Fully Funded I replace them with AppliedLearning only as it has the higher probability than Math and Science of being Fully Funded. I then merged the projects features file (Projects.csv)with the schools features file (Schools.csv), and drop Live projects rows from the target feature (Project Current Status) as I concerned in Expired and Fully Funded projects only. Then I convert the categorical features into dummies to prepare them for the modeling process.   
 
 ![image](https://user-images.githubusercontent.com/93243958/139572080-11663794-eaef-4a62-a94f-f799368486e8.png)
 
@@ -27,9 +26,9 @@ or expired?**
 
 **Findings:**
 
-•	The highest success ratio was for "Food, Clothing & Hygiene”, followed by "Sports & Exercise Equipment".
+•	The most funded percentage of project resources was for "Food, Clothing & Hygiene”, followed by "Sports & Exercise Equipment".
 
-•	The lowest success ratio was for "Technology”, followed by "Visitors" and "Trips".
+•	The lowest funded percentage of project resources was for "Technology”, followed by "Visitors" and "Trips".
 
 **Question 2: what is the seasonality pattern for donations?**
 
@@ -47,7 +46,7 @@ or expired?**
 
 • From the figure above it appears that there tends to be a surge in the number of projects that get funded at the start of the school year, this number then decrease significantly around the summer time. The overall pattern has steady increase year to year. A few spikes in the number of projects funded. These spikes are due to large donation match partnerships from Ripple and Bill and Melinda Gates.
 
-• The figure below shows that indeed more projects are posted at the beginning of the school year which in turn leads to an increase in the number of live projects. This is also shown by the fact that the rate of funding projects and the rate of posting projects show a small but significant correlation .
+• The figure shows that indeed more projects are posted at the beginning of the school year which in turn leads to an increase in the number of live projects. This is also shown by the fact that the rate of funding projects and the rate of posting projects show a small but significant correlation .
 
 
 **Features Engineering and Selection:**
@@ -61,7 +60,7 @@ or expired?**
 
 **Dimensionality Reduction:**
 
-The main file to be used in solving our classification problem is the Projects.csv file. we started to look at the features and exclude non-contributed features (e.g. Teacher ID, School ID). Then, we explored the categorical columns that have high number of unique values and try to reduce them without losing information. For instance, Project Subject Category Tree column include instances with single categories and other instances with two categories combined as one. In order to have only one category in each row, we did the contingency table for every single category (main categories) with the Project Current Status class so we had frequency of each category for being Fully Funded or Expired. After that, we calculated the probability of each of them as shown in Table (3)
+The main file to be used in solving our classification problem is the Projects.csv file. I started to look at the features and exclude non-contributed features (e.g. Teacher ID, School ID). Then, I explored the categorical columns that have high number of unique values and try to reduce them without losing information. For instance, Project Subject Category Tree column include instances with single categories and other instances with two categories combined as one. In order to have only one category in each row, I did the contingency table for every single category (main categories) with the Project Current Status class so I had frequency of each category for being Fully Funded or Expired. After that, I calculated the probability of each of them as shown in Table (3).
 
 ![image](https://user-images.githubusercontent.com/93243958/139011250-348036c4-34c5-4fca-a355-d96205fd5dcb.png)
 
